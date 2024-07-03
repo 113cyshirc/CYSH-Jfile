@@ -1,0 +1,17 @@
+v1
+
+[args]
+name1
+
+[question]
+輸入名字，輸出「hello, 名字」。
+
+[test]
+//in
+world
+//out
+Hello, world
+//in
+jerry
+//out
+Hello, jerry
