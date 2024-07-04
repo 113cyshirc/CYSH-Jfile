@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/user/3bed848b-ab70-463a-ade3-235f88526a6a/project/1174ee83-6f26-4be7-b725-5ff23322e3ec.svg)](https://wakatime.com/badge/user/3bed848b-ab70-463a-ade3-235f88526a6a/project/1174ee83-6f26-4be7-b725-5ff23322e3ec)
+[![wakatime](https://wakatime.com/badge/github/113cyshirc/CYSH-Jfile.svg)](https://wakatime.com/badge/github/113cyshirc/CYSH-Jfile)
 # CYSH Judge 檔案系統
 # 檔案類型
 ## .cjz - CYSHJ題目檔
