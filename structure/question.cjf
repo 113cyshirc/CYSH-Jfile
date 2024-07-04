@@ -1,17 +1,24 @@
 v1
 
+[general]
+Difficulty:1.0
+CompatibilityMode:False
+SampleTests:3
+
+[Metadata]
+Title:哈囉
+TitleUnicode:哈囉
+author:布萊恩·克尼漢
+authorUnicode:Brian Kernighan
+Creator:Know Scratcher
+Version:0
+Source:Brian Kernighan
+Tags:基本輸出輸入
+QuestionID:001
+QuestionSetID:a001
+
 [args]
 name1
 
 [question]
 輸入名字，輸出「hello, 名字」。
-
-[test]
-//in
-world
-//out
-Hello, world
-//in
-jerry
-//out
-Hello, jerry
