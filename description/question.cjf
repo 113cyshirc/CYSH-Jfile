@@ -4,6 +4,7 @@ v1
 Difficulty:難度(自動) -> float
 CompatibilityMode:是否為相容模式 -> [True,False]
 SampleTests:說明用的測資數量 -> int
+Tests:測資數量 -> int
 
 [Metadata]
 Title:翻譯標題
