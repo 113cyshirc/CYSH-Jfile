@@ -1,0 +1,25 @@
+CYSHJ file format v1
+
+[general]
+Difficulty:難度(自動) -> float
+CompatibilityMode:是否為相容模式 -> [True,False]
+SampleTests:說明用的測資數量 -> int
+Tests:測資數量 -> int
+
+[Metadata]
+Title:翻譯標題 -> str
+TitleUnicode:原文標題 -> str
+author:翻譯作者名字 -> str
+authorUnicode:原文作者名字 -> str
+Creator:上傳者名字 -> str
+Version:版本(目前無用處) -> int
+Source:來源 -> str
+Tags:基本輸出輸入 -> str
+QuestionID:題目在題庫的id(自動) -> str
+QuestionSetID:題目在題庫有分類的id(自動) -> str
+
+[args]
+...(所有的args名稱)
+
+[question]
+問題說明

@@ -1,4 +1,4 @@
-v1
+CYSHJ file format v1
 
 [general]
 Difficulty:1.0
@@ -19,7 +19,7 @@ QuestionID:001
 QuestionSetID:a001
 
 [args]
-name1
+name
 
 [question]
 輸入名字，輸出「hello, 名字」。
