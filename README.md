@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/github/113cyshirc/CYSH-Jfile.svg)](https://wakatime.com/badge/github/113cyshirc/CYSH-Jfile)
 # CYSH Judge 檔案系統
 # 檔案類型
 ## .cjz - CYSHJ題目檔
