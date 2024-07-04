@@ -17,7 +17,7 @@ class CJFile:
     """
     CYSHJ-題目檔讀取的結果
     # 使用方法
-    CJFile(`路徑`)
+    CJFile(`不含副檔名路徑`)
     使用 CJFile.read()
     # 參數
     `fileVersion` (int) 編碼版本
@@ -82,17 +82,17 @@ class CJFile:
         self.read()
     
     def read(self):
-        if not self.path.endswith(".cjz"):
-            raise NotCjFileError()
-        if not os.path.exists(self.path):
-            raise FileNotFoundError("could not find the file you want!!!")
-        
-        
-        with zipfile.ZipFile(self.path,"r") as zip:
-            zip.extractall("./temp")
         raw = ""
-        with open("./temp/question.cjf","r",encoding="utf-8") as cjf:
-            raw = cjf.read()
+        if os.path.exists(f"{self.path}.cjz"):
+            with zipfile.ZipFile(f"{self.path}.cjz","r") as zip:
+                zip.extractall("./temp")
+            with open("./temp/question.cjf","r",encoding="utf-8") as cjf:
+                raw = cjf.read()
+        elif os.path.exists(self.path+".cjf"):
+            with open(f"{self.path}.cjf"):
+                raw = cjf.read()
+        else:
+            raise FileNotFoundError("could not find the file you want!!!")
         lines = raw.split("\n")
         lines = [x for x in lines if x] # remove blanks
         self.fileVersion = int(lines[0].split("CYSHJ file format v")[1])
@@ -145,7 +145,7 @@ class CJFile:
 # zip = zipfile.ZipFile("./test.cjz","r")
 # print(zip.namelist())
 
-file = CJFile("./test.cjz")
+file = CJFile("./test")
 print(file.difficulty,
       file.compatibilityMode,
       file.sampleTests,
