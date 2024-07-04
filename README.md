@@ -8,3 +8,9 @@
 
 ## .cjt - CYSHJ測資檔
 測資的檔案，將以往的in、out檔合併的新檔案模式。
+
+# 檔案配置
+    <any>.czj
+     - question.cjf
+     - <n>.cjt
+     - ...
