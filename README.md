@@ -1,3 +1,4 @@
+[time](https://wakatime.com/badge/user/3bed848b-ab70-463a-ade3-235f88526a6a/project/444dd547-fcb2-4e8a-a882-35ad88405efd.svg)
 # CYSH Judge 檔案系統
 # 檔案類型
 ## .cjz - CYSHJ題目檔
