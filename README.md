@@ -12,5 +12,4 @@
 # 檔案配置
     <any>.czj
      - question.cjf
-     - <n>.cjt
-     - ...
+     - tests.cjt
