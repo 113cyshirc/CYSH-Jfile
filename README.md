@@ -10,8 +10,12 @@
 ## .cjf - CYSHJ描述檔
 題目的描述、設定
 
+**編碼:UTF-8**
+
 ## .cjt - CYSHJ測資檔
 測資的檔案，將以往的in、out檔合併的新檔案模式。
+
+**編碼:UTF-8**
 
 [**檔案格式更新紀錄**](./update_logs/file_format.md)
 
@@ -27,6 +31,7 @@
 
 ## update.py
 更新指定資料夾cjf檔
+
 
 ## read.py
 展開cjz檔案並讀取
