@@ -14,3 +14,14 @@
     <any>.czj
      - question.cjf
      - tests.cjt
+# 功能
+## build.py
+將指定資料夾匯出為cjz檔
+
+**匯出同時會更新cjf**
+
+## update.py
+更新指定資料夾cjf檔
+
+## read.py
+展開cjz檔案並讀取

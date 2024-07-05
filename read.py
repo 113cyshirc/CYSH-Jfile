@@ -55,8 +55,9 @@ class CJFile:
     `question` (str) 題目敘述
 
     """
-    def __init__(self,path:str) -> None:
+    def __init__(self,path:str,remove:bool=False) -> None:
         self.path:str = path
+        self.remove:bool = remove
         # general
         self.fileVersion:int = None # DECIDE int or str
         self.difficulty:float = None
@@ -83,13 +84,15 @@ class CJFile:
     
     def read(self):
         raw = ""
-        if os.path.exists(f"{self.path}.cjz"):
-            with zipfile.ZipFile(f"{self.path}.cjz","r") as zip:
-                zip.extractall("./temp")
-            with open("./temp/question.cjf","r",encoding="utf-8") as cjf:
+        if os.path.exists(self.path+"/question.cjf"):
+            print("Reading cjf file...")
+            with open(f"{self.path}/question.cjf","r",encoding="utf-8") as cjf: # WTF?
                 raw = cjf.read()
-        elif os.path.exists(self.path+".cjf"):
-            with open(f"{self.path}.cjf"):
+        elif os.path.exists(f"{self.path}.cjz"):
+            print("Reading cjz file...")
+            with zipfile.ZipFile(f"{self.path}.cjz","r") as zip:
+                zip.extractall(self.path)
+            with open(f"{self.path}/question.cjf","r",encoding="utf-8") as cjf:
                 raw = cjf.read()
         else:
             raise FileNotFoundError("could not find the file you want!!!")
@@ -138,27 +141,28 @@ class CJFile:
 
             case _:
                 raise UnsupportedFileVersion()
-
-        shutil.rmtree("./temp")
+        if self.remove:
+            shutil.rmtree("./temp")
             
 
 # zip = zipfile.ZipFile("./test.cjz","r")
 # print(zip.namelist())
 
-file = CJFile("./test")
-print(file.difficulty,
-      file.compatibilityMode,
-      file.sampleTests,
-      file.tests,
-      file.title,
-      file.titleUnicode,
-      file.author,
-      file.authorUnicode,
-      file.creator,
-      file.version,
-      file.source,
-      file.tags,
-      file.questionID,
-      file.questionSetID,
-      file.args,
-      file.question)
+if __name__ == "__main__":
+    file = CJFile("./a001")
+    print(file.difficulty,
+        file.compatibilityMode,
+        file.sampleTests,
+        file.tests,
+        file.title,
+        file.titleUnicode,
+        file.author,
+        file.authorUnicode,
+        file.creator,
+        file.version,
+        file.source,
+        file.tags,
+        file.questionID,
+        file.questionSetID,
+        file.args,
+        file.question)
