@@ -4,7 +4,7 @@ CYSHJ file format v1
 Difficulty:1.0
 CompatibilityMode:False
 SampleTests:3
-Tests:7
+Tests:8
 
 [Metadata]
 Title:哈囉
@@ -23,3 +23,5 @@ name
 
 [question]
 輸入名字，輸出「hello, 名字」。
+
+
