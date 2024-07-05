@@ -2,7 +2,7 @@
 # CYSH Judge 檔案系統
 # 檔案類型
 
-<img src="./image/new_file_system.png" height=500px>
+<img src="./image/nfs.png" height=500px>
 
 ## .cjz - CYSHJ題目檔
 在進行傳輸時使用，單檔案，可透過我們特製的系統import。
