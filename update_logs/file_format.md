@@ -71,9 +71,9 @@
     QuestionID:001
     QuestionSetID:a001
 
-    [l:args]
+    [l:args]                        <--content type:classifier
     name                            <--list
 
-    [s:question]
+    [s:question]                    <--content type:classifier
     輸入名字，輸出「hello, 名字」。   <--str
     //comment                       <--comment
