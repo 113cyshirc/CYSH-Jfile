@@ -9,6 +9,7 @@
 - **str**
 
 ### 格式
+#### cjf
     CYSHJ file format v1            <--format version
 
     [general]                       <--classifier
@@ -34,6 +35,25 @@
 
     [question]
     輸入名字，輸出「hello, 名字」。   <--str
+
+#### cjt
+    [in]
+    40
+
+    [out]
+    NO
+
+    [in]
+    100
+
+    [out]
+    YES
+
+    [in]
+    168
+
+    [out]
+    YES
 
 ## v2
 ### 更新原因
@@ -77,3 +97,6 @@
     [s:question]                    <--content type:classifier
     輸入名字，輸出「hello, 名字」。   <--str
     //comment                       <--comment
+
+### 註解
+- cjt無更新

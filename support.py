@@ -39,4 +39,4 @@ class Supporter:
             raise FileOperateError()
 
 if __name__ == "__main__":
-    Supporter("./12")
+    Supporter("./1")
