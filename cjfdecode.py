@@ -12,8 +12,9 @@ class FileFormatError(Exception):
         super().__init__(f"File format error: {msg}")
 
 class Question:
-    def  __init__(self) -> None:
-        pass
+    def  __init__(self,input_:list,output_:list) -> None:
+        self.input:list = input_
+        self.output:list = output_
 
 def loadcjf(fp:TextIOWrapper) -> dict:
     return loadscjf(fp.read())
@@ -77,5 +78,33 @@ def loadscjf(text:str) -> dict:
 
             
 
-def loadcjt(file:TextIOWrapper) -> list[Question]:
-    pass
+def loadcjt(fp:TextIOWrapper) -> list[Question]:
+    return loadscjt(fp.read())
+
+def loadscjt(text:str) -> list[Question]:
+    lines = text.split("\n")
+    result = []
+    class_tag = ""
+    in_record = []
+    out_record = []
+    for i in lines:
+        if i == "" or i.startswith("//"):
+            continue
+        elif i == "[in]":
+            if in_record != []:
+                result.append(Question(in_record,out_record))
+            class_tag = "in"
+            in_record = []
+            out_record = []
+        elif i == "[out]":
+            class_tag = "out"
+        else:
+            match class_tag:
+                case "in":
+                    in_record.append(i)
+                case "out":
+                    out_record.append(i)
+    result.append(Question(in_record,out_record))
+
+    return result
+
