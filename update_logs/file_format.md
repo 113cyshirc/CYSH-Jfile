@@ -7,7 +7,7 @@
 
 ### 類型
 - format version
-- classifier
+- class tag
 - **content type**
 - key,value
 - list
@@ -17,13 +17,13 @@
 ### 格式
     CYSHJ file format v2            <--format version
 
-    [general]                       <--classifier
+    [general]                       <--class tag
     Difficulty:1.0                  <--key:value
     CompatibilityMode:False          
     SampleTests:3
     Tests:9
 
-    [Metadata]                      <--classifier
+    [Metadata]                      <--class tag
     Title:哈囉
     TitleUnicode:哈囉
     author:布萊恩·克尼漢
@@ -35,10 +35,10 @@
     QuestionID:001
     QuestionSetID:a001
 
-    [l:args]                        <--content type:classifier
+    [l:args]                        <--content type:class tag
     name                            <--list
 
-    [s:question]                    <--content type:classifier
+    [s:question]                    <--content type:class tag
     輸入名字，輸出「hello, 名字」。   <--str
     //comment                       <--comment
 
@@ -48,7 +48,7 @@
 ## v1  (2024/7/4)
 ### 類型
 - **format version**
-- **classifier**
+- **class tag**
 - **key,value**
 - **list**
 - **str**
@@ -57,13 +57,13 @@
 #### cjf
     CYSHJ file format v1            <--format version
 
-    [general]                       <--classifier
+    [general]                       <--class tag
     Difficulty:1.0                  <--key:value
     CompatibilityMode:False          
     SampleTests:3
     Tests:9
 
-    [Metadata]                      <--classifier
+    [Metadata]                      <--class tag
     Title:哈囉
     TitleUnicode:哈囉
     author:布萊恩·克尼漢

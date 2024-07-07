@@ -1,4 +1,4 @@
-CYSHJ file format v1
+CYSHJ file format v2
 
 [general]
 Difficulty:1.0
@@ -18,10 +18,10 @@ Tags:基本輸出輸入
 QuestionID:001
 QuestionSetID:a001
 
-[args]
+[l:args]
 name
 
-[question]
+[s:question]
 輸入名字，輸出「hello, 名字」。
 
 
