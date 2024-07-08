@@ -69,6 +69,7 @@ class Updater:
             else:
                 complete += i
             complete += "\n"
+        complete = complete[:-1]
         with open(f"{self.path}/question.cjf","w",encoding="utf-8") as jf:
             jf.write(complete)
         logging.debug(f"updater: write done")
