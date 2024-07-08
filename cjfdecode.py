@@ -41,7 +41,7 @@ def loadscjf(text:str) -> dict:
             continue
         else:
             match file_format:
-                case 2:
+                case 2|3:
                     if i.startswith("[") and i.endswith("]"): # read tag
                         class_tag = i[1:-1]
                         type_analyze = class_tag.split(":") # normal tag

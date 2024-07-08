@@ -1,4 +1,4 @@
-CYSHJ file format v2
+CYSHJ file format v3
 
 [general]
 Difficulty:1.0
@@ -17,6 +17,10 @@ Source:Brian Kernighan
 Tags:基本輸出輸入
 QuestionID:001
 QuestionSetID:a001
+
+[limit]
+Time:2
+Memory:512
 
 [l:args]
 name
