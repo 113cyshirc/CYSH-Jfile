@@ -1,12 +1,13 @@
 CYSHJ file format v3
 
-[general]
+// General
 Difficulty:1.0
 CompatibilityMode:False
 SampleTests:3
 Tests:9
+LastUpdate:0
 
-[Metadata]
+// Metadata
 Title:哈囉
 TitleUnicode:哈囉
 author:布萊恩·克尼漢
@@ -15,10 +16,11 @@ Creator:Know Scratcher
 Version:0
 Source:Brian Kernighan
 Tags:基本輸出輸入
+Hint:
 QuestionID:001
 QuestionSetID:a001
 
-[limit]
+// limit
 Time:2
 Memory:512
 
@@ -26,4 +28,13 @@ Memory:512
 name
 
 [s:question]
-輸入名字，輸出「hello, 名字」。
+學習所有程式語言的第一個練習題 
+請寫一個程式，可以讀入指定的字串，並且輸出指定的字串。
+
+比如：輸入字串 "world", 則請輸出 "hello, world"
+
+[s:in]
+輸入總共一行，內含一組文字
+
+[s:out]
+輸出題目指定的文字。

@@ -11,7 +11,6 @@
 """
 
 from io import TextIOWrapper
-import json
 
 class FileFormatError(Exception):
     def __init__(self, msg:str="") -> None:
@@ -41,7 +40,7 @@ def loadscjf(text:str) -> dict:
             continue
         else:
             match file_format:
-                case 2|3:
+                case 2:
                     if i.startswith("[") and i.endswith("]"): # read tag
                         class_tag = i[1:-1]
                         type_analyze = class_tag.split(":") # normal tag
