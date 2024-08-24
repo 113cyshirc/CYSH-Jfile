@@ -87,6 +87,36 @@ def loadscjf(text:str) -> dict:
                 is_reading_tag = False
     return result
 
+def tocjf(d:dict) -> str:
+    # [comment description]
+    # kv, kv pair: key,value (pair)
+    # dict: dictionary
+
+    result = "" 
+    for k,v in d.items(): # go through all k,vs in the dict
+        if k == "_format": # format encode
+            result += f"CYSHJ file format v{v}"
+        elif k.startswith("_comment"): # the comments
+            result += f"\n//{v}"
+        elif type(v) == list: # if the value is list, then add [l:]
+            result += f"\n[l:{k}]"
+            for j in v: # make every item in the list a new line 
+                result += f"\n{j}"
+        elif "\n" in v: # if the value is a string (it doesn't matter a kv pair or string, they will all be decode as the same)
+            result += f"\n[s:{k}]\n{v[:-1]}" # [:-1] to fix the extra \n
+        else: # kv pair
+            result += f"{k}:{v}"
+        result += "\n"
+    return result
+
+def dumpcjf(d:dict,fp:TextIOWrapper):
+    if fp.writable():
+        fp.seek(0)
+        fp.write(tocjf(d))
+        fp.truncate()
+    else:
+        raise FileWriteError()
+
 def loadcjt(fp:TextIOWrapper) -> list[tuple]:
     return loadscjt(fp.read())
 
@@ -152,8 +182,8 @@ def tocjt(l:list) -> str:
 
 def dumpcjt(l:list,fp:TextIOWrapper):
     if fp.writable():
-        fp.seek(0)
-        fp.write(tocjt(l))
+        fp.seek(0) # move to first char
+        fp.write(tocjt(l)) # write
         fp.truncate()
     else:
         raise FileWriteError()
