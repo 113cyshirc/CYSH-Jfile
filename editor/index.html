@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <audio src="./resource/key1.mp3" id="key1"></audio>
+    <audio src="./resource/key2.mp3" id="key2"></audio>
+    <audio src="./resource/select.mp3" id="select"></audio>
+    <audio src="./resource/click.mp3" id="click_s"></audio>
+    <title>題目編輯器</title>
+</head>
+
+<body>
+    <div class="out_container">
+        <div class="row">
+            <button class="click_s" type="button" id="new">新增</button>
+            <button class="click_s" type="button" id="folder">開啟資料夾</button>
+            <button class="click_s" type="button" id="cjz">開啟CJZ</button>
+            <input type="text" name="t" id="path" placeholder="請輸入資料夾或cjz路徑" value="test">
+        </div>
+        <div class="row">
+            <button class="click_s" type="button" id="save">儲存</button>
+            <button class="click_s" type="button" id="pack">打包為CJZ</button>
+        </div>
+        <br>
+        <div class="row">
+            <div class="tab click_s" id="question_tab">題目資訊</div>
+            <div class="tab click_s" id="tests_tab">測試資料</div>
+        </div>
+        
+        <div class="container" id="question">
+        </div>
+        <div class="container" id="tests">
+        </div>
+    </div>
+    <div class="message"><p id="message">tte</p></div>
+</body>
+
+</html>

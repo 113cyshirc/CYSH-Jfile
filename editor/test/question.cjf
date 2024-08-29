@@ -1,0 +1,42 @@
+CYSHJ file format v3
+
+// General
+Difficulty:
+CompatibilityMode:False
+SampleTests:1
+Tests:5
+LastUpdate:0
+
+// Metadata
+Title:test
+TitleUnicode:test
+author:lol
+authorUnicode:lol
+Creator:yianlee2008
+Version:0
+Source:souce
+Tags:tagssss
+Hint:no hint
+QuestionID:
+QuestionSetID:
+
+// limit
+Time:2
+Memory:100
+
+[l:args]
+a
+b
+c
+d
+e
+f
+
+[s:question]
+測試的題目
+
+[s:in]
+這是輸入說明測試
+
+[s:out]
+這是output說明測試
